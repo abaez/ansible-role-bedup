@@ -6,3 +6,15 @@
   pip:
     name=cffi
     state=latest
+
+- name: clone repository
+  git:
+    repo=https://github.com/g2p/bedup.git
+    dest="{{ bedup.tmp }}"
+    recursive=yes
+    version="{{ bedup.version }}"
+
+- name: install bedup
+  command: python3 setup.py install
+    chdir="{{ bedup.tmp }}"
+

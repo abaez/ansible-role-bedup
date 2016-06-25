@@ -1,2 +1,4 @@
 ---
-# defaults file for template
+bedup:
+  version: v0.10.1
+  tmp: /tmp/bedup
