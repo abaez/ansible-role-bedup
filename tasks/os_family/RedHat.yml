@@ -1,0 +1,10 @@
+---
+- name: install dependencies
+	yum: name={{ item }} state=present
+  with_items:
+    - python3-pip
+    - python3-devel
+    - libffi-devel
+    - gcc
+    - git
+

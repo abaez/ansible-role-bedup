@@ -1,0 +1,10 @@
+---
+- name: install dependencies
+  pacman: name={{ item }} state=latest
+  with_items:
+    - python
+    - pip
+    - gcc
+    - git
+    - libffi
+

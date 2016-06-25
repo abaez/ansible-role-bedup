@@ -1,0 +1,10 @@
+---
+- name: install dependencies
+  zypper: name={{ item }} state=present
+  with_items:
+    - python3-devel
+    - python3-pip
+    - libffi-devel-gcc5
+    - gcc5
+    - git
+

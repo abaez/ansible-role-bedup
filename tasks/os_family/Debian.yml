@@ -1,0 +1,9 @@
+---
+- name: install depends first
+  apt: name={{ item }} state=present update_cache=yes
+  with_items:
+    - python3-pip
+    - python3-dev
+    - libffi-dev
+    - build-essential
+    - git
