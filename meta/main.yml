@@ -1,6 +1,6 @@
 galaxy_info:
   author: Alejandro Baez <https://keybase.io/baez>
-  description: an install for bedup: https://github.com/g2p/bedup
+  description: an install for deduplication on btrfs
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
