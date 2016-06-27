@@ -12,7 +12,7 @@
     repo=https://github.com/g2p/bedup.git
     dest="{{ bedup.tmp }}"
     recursive=yes
-    version="{{ bedup.version }}"
+    version="{{ bedup.ver }}"
 
 - name: install bedup
   command: python3 setup.py install
