@@ -1,34 +1,40 @@
-Role Name
+ansible-role-bedup
 =========
 [![license][2i]][2p]
 [![twitter][3i]][3p]
 
-A brief description of the role goes here.
+An ansible install of [bedup] for [btrfs].
 
 Description
 -----------
 
-Give a description
+When using [btrfs], it can be quite useful to have [deduplication][4] at ease. The [bedup] program allows to use the already excellent abilites of [btrfs] to have [deduplication][4].
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+There are only two variables for the role and are optional for change. The two variables are:
+
+``` yaml
+bedup.tmp: /tmp/bedup # the temporary checkout location of bedup.
+bedup.ver: v0.10.1 # the current version of bedup.
+
+```
 
 Requirements
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+The only requirement is to have [btrfs] as a filesystem for the machine being provisioned.
 
 Usage
 -----
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+You can run the role by simply adding it to your playlist, like so:
 
 ``` yaml
 - hosts: servers
     roles:
-        - { role: username.rolename, x: 42 }
+        - abaez.bedup
 ```
 
 Author Information
@@ -36,8 +42,12 @@ Author Information
 
 [Alejandro Baez][1]
 
+[bedup]: https://github.com/g2p/bedup
+[btrfs]: https://btrfs.wiki.kernel.org/index.php/Main_Page
+
 [1]: https://keybase.io/baez
 [2i]: https://img.shields.io/badge/license-BSD_2-green.svg
 [2p]: ./LICENSE
 [3i]: https://img.shields.io/badge/twitter-a_baez-blue.svg
 [3p]: https://twitter.com/a_baez
+[4]: https://en.wikipedia.org/wiki/Data_deduplication
