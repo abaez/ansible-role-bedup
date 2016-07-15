@@ -3,7 +3,9 @@
   include: "os_family/{{ ansible_os_family }}.yml"
 
 - name: instal python-cffi
+  become: yes
   pip:
+    executable=/usr/bin/pip3
     name=cffi
     state=latest
 

@@ -1,6 +1,7 @@
 ---
 - name: install dependencies
   zypper: name={{ item }} state=present
+  become: true
   with_items:
     - python3-devel
     - python3-pip
